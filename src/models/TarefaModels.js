@@ -7,7 +7,7 @@ class TarefaModel {
     this.description = description; 
     }
 
-    async listarTarefas() {
+    static async listarTarefas() {
         //const db = require("./Database");
         let resp = await db.query("select * from `tarefa`;");
         console.log("model", resp, "funcionou");

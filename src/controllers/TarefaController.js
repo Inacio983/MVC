@@ -3,9 +3,9 @@ const TarefaModel = require('../models/TarefaModels');
 const tarefas = [];
 
 async function getTarefas(req, res) { 
-let lista = await TarefaModel.listarTarefas();
-console.log("get tarefas",lista);
-return lista;
+tarefas.push(await TarefaModel.listarTarefas());
+console.log(tarefas);
+res.render("tarefas",{ tarefas });
 } 
 
 function addTarefa(req, res) { 
