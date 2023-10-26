@@ -8,6 +8,7 @@ app.set("views","./src/views");
 
 app.get("/", (req,res)=>res.send("<h1>MVC</h1>"))
 app.use(express.urlencoded({ extended: true })); 
+
 app.get('/tarefas', tarefaController.getTarefas); 
 app.post('/tarefas', tarefaController.addTarefa); 
 app.listen(port, () => { 
