@@ -19,7 +19,7 @@ async function connect(){
 async function query(sql){
   const conn = await connect();
   const [rows] = await conn.query(sql);
-  console.log("database", rows);
+  //console.log("database", rows);
 	return rows;
 }
 
