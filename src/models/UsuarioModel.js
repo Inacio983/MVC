@@ -10,8 +10,8 @@ class UsuarioModel {
 
     static async autenticar(email, senha) {
         const db = require("./Database");
-        console.log("SELECT * FROM usuario WHERE email=`${email}` and senha=`${senha}`");
-        let resp = await db.query("SELECT * FROM usuario WHERE email=`${email}` and senha=`${senha}`");
+        console.log(`SELECT * FROM usuario WHERE email='${email}' and senha='${senha}'`);
+        let resp = await db.query(`SELECT * FROM usuario WHERE email='${email}' and senha='${senha}'`);
         // testar let resp = await db.query("SELECT * FROM usuario WHERE email=`email` and senha=`senha`");
         return resp;
         //let resp = await db.query("INSERT INTO `usuario` (`email`, `senha`)VALUES ('"+email+"', '"+senha+"');");
